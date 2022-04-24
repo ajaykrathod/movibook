@@ -73,7 +73,7 @@ function Login() {
     if(!emailRegex.test(email)){
         setCredentialError("Enter Valid EMail")
     }
-    if(passwordRegex.test(password)){
+    if(!passwordRegex.test(password)){
       setPasswordError("Your password should contain Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character")
     }
       
@@ -88,9 +88,9 @@ function Login() {
           <div className={loginStyles.signupMessage}>{signUpMessage}</div>
         </div>
         <div className={loginStyles.loginform}>
-            <input style={credentialError ? {border: "1px solid red"} : {}} type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter Your EMail' name="" id="" className={loginStyles.email}/>
+            <input style={credentialError ? {border: "1px solid red"} : {}} type="email" value={email} onChange={(e) => {setEmail(e.target.value);setCredentialError()}} placeholder='Enter Your EMail' name="" id="" className={loginStyles.email}/>
             <div className={loginStyles.displayError}>{credentialError}</div>
-            <input style={passwordError ? {border: "1px solid red"} : {}} type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Enter Your Password'  name="" id="" className={loginStyles.password}/>
+            <input style={passwordError ? {border: "1px solid red"} : {}} type="password" value={password} onChange={(e) => {setPassword(e.target.value);setPasswordError()}} placeholder='Enter Your Password'  name="" id="" className={loginStyles.password}/>
             <div className={loginStyles.displayError}>{passwordError}</div>
             <button onClick={handleSubmit}>Login</button>
         </div>
