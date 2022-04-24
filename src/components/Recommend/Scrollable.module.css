@@ -1,0 +1,27 @@
+.scrollX {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+}
+
+.scrollX::-webkit-scrollbar {
+    width: 3px;
+    height: 5px;
+    border-radius: 20px;
+    padding: 3px;
+  }
+  
+  /* Track */
+.scrollX::-webkit-scrollbar-track {
+    background: gray;
+}
+   
+  /* Handle */
+.scrollX::-webkit-scrollbar-thumb {
+    background: rgb(93, 93, 93); 
+}
+  
+  /* Handle on hover */
+.scrollX::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

@@ -1,0 +1,84 @@
+.modalContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 100%;
+    background-color: rgba(128 , 128, 128, 0.6);
+}
+
+.modal {
+    position: fixed;
+    top: 15vh;
+    left: 20vw;
+    width: 60vw;
+    height: 70vh;
+    z-index: 10000;
+    display: flex;
+    margin: auto;
+    padding: 1px;
+    flex-direction: row;
+    border-radius: 30px;
+    box-shadow: 5px 10px 100px 10px #ededed;
+    background-color:#424242;
+    color: white;
+}
+.posterContainer {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    margin-left: -1.5vw;
+}
+.posterImage {
+    border-radius: 30px 0 0 30px;
+    width: auto;
+    height: 70vh;
+}
+
+.infobook {
+    margin-left: 2vw;
+    overflow-y: auto;
+    height: auto;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+.infobook strong {
+    margin-bottom: 0;
+}
+.infobook h3, .infobook h2, .infobook div {
+    margin-top: 1vh;
+}
+.close {
+    position: relative;
+    left: 95%;
+    top: 4%;
+    color: white;
+}
+
+@media(max-width:850px){
+    .close {
+        left: 90%;
+    }
+    
+    .modal {
+        top: 15vh;
+        left: 10vw;
+        padding: 0;
+        justify-content: flex-start;
+        width: 80vw;
+        height: 70vh;
+    }
+
+    .posterContainer {
+        /* background-color: rgb(24, 108, 80); */
+        margin-left: -3vw;
+    }
+
+    .posterImage {
+        width: 35vw;
+        margin: 0;
+    }
+}

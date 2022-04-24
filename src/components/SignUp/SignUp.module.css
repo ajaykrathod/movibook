@@ -1,0 +1,169 @@
+.loginform {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: auto;
+    margin: 10vh auto;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;    
+    box-shadow: 5px 10px 30px 10px #ededed;
+    z-index: 100;
+    border-radius: 30px;
+}
+.title {
+    font-weight: bolder;
+    padding-top: 10vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.authContainer {
+    display: flex;
+}
+
+.authContainer img {
+    margin:auto;
+}
+
+.authContainer .left:hover {
+    transform: translateX(-20%);
+    transition: all 2s ease;
+}
+
+.authContainer .right:hover {
+    transform: translateX(20%);
+    transition: all 2s ease;
+}
+.container {
+    display: flex;
+}
+.first_name {
+    width: 25vw;
+    line-height: 4vh;
+    font-size: small;
+    padding: 0 10px;
+    outline: none;
+    border: none;
+    box-shadow: 5px 10px 30px 10px #ededed;
+    margin: 20px 5px;
+    border-radius: 20px;
+}
+
+.last_name {
+    width: 25vw;
+    line-height: 4vh;
+    padding: 0 10px;
+    font-size: small;
+    outline: none;
+    border: none;
+    box-shadow: 5px 10px 30px 10px #ededed;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+.loginform button {
+    height: 5vh;
+    width: 40%;
+    font-size: small;
+    margin: 20px 0;
+    border-radius: 20px;
+    border: 1px solid #ededed;
+    box-shadow: 5px 10px 30px 10px #ededed;
+}
+
+.dob {
+    width: 25vw;
+    line-height: 4vh;
+    font-size: large;
+    outline: none;
+    border: none;
+    box-shadow: 5px 10px 30px 10px #ededed;
+    margin: 20px;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+.email {
+    width: 80%;
+    margin: auto;
+    line-height: 4vh;
+    font-size: small;
+    outline: none;
+    padding-left: 10px;
+    border: none;
+    box-shadow: 5px 10px 30px 10px #ededed;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+.phone {
+    width: 80%;
+    margin: auto;
+    line-height: 4vh;
+    font-size: small;
+    outline: none;
+    padding-left: 10px;
+    border: none;
+    box-shadow: 5px 10px 30px 10px #ededed;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+.displayError {
+    color: red;
+}
+
+.password {
+    width: 80%;
+    margin: auto;
+    line-height: 4vh;
+    font-size: small;
+    outline: none;
+    padding-left: 10px;
+    border: none;
+    box-shadow: 5px 10px 30px 10px #ededed;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+.snackbar {
+    position: absolute;
+    top: 80vh;
+    left: 200vw;
+    z-index: 1000;
+    padding: 10px 40px;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    animation: snackVis 4s forwards;
+}
+
+@keyframes snackVis {
+    from{left: 200vw;}
+    to{left: 50vw;}
+}
+.email:hover, .password:hover, .first_name:hover, .last_name:hover, .phone:hover, .dob:hover, .buttons button:hover, .loginform button {
+    transform: scale(1.2);
+    transition: all 3s ease;
+}
+
+.email:focus, .password:focus, .first_name:focus, .last_name:focus, .phone:focus, .dob:focus, .buttons button:focus {
+    border: 1px solid aqua;
+    transition: all 3s ease;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: auto;
+    justify-content: space-between;
+    height: 15vh;
+}
+
+.buttons button {
+    height: 5vh;
+    font-size: small;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 5px 10px 40px 10px #ededed;
+}

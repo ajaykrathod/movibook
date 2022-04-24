@@ -1,0 +1,24 @@
+.landing {
+    display: flex;
+    position: relative;
+    background: url('/public/tesla.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.text {
+    position: absolute;
+    top: 50vh;
+    left: 30vw;
+    text-align: center;
+    padding: auto;
+    color: white;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.subtitle {
+    width: 60%;
+}

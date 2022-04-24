@@ -1,0 +1,61 @@
+.modalContent {
+    display: flex;
+    height: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.optionContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movies, .books {
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    height: 130px;
+    margin: 30px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.movies:hover, .books:hover {
+    transform: scale(1.2);
+    transition: transform 3s ease;
+}
+
+.selectText {
+    width: 70%;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.genreList {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: center;
+}
+
+.buttons button {
+   border-radius: 10px;
+   border: 1px solid gray;
+   background-color: rgb(255, 255, 255);
+   margin: 30px 10px;
+   font-size: medium;
+   padding: 10px 20px;
+
+}
+
+.genre {
+    padding: 5px 10px;
+    background: white;
+    border-radius: 9px;
+    margin: 10px;
+    box-shadow: 5px 10px 10px 10px #ededed;
+}
