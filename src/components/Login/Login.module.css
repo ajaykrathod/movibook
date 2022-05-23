@@ -1,3 +1,9 @@
+.loginScreen {
+    width: 100vw;
+    height: 100vh;
+    background: url('/public/james.jpg');
+    background-repeat: no-repeat;
+}
 .loginform {
     display: flex;
     flex-direction: column;

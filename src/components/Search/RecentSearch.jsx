@@ -1,3 +1,4 @@
+import Modal from 'components/Movies/Modal'
 import Scrollable from 'components/Recommend/Scrollable'
 import { useFeatureContext } from 'Context/NavigationContext'
 import { arrayRemove, collection, getDocs, getFirestore, onSnapshot, query, where } from 'firebase/firestore'

@@ -192,7 +192,7 @@ function SignUp() {
     }
   }
   return (
-    <>
+    <div className={loginStyles.signupScreen}>
       <div className={loginStyles.title}><h1>SignUp</h1></div>
       <div className={loginStyles.authContainer}>
         <img src="/left.png" alt="" srcSet="" height="100px" onClick={handleRightNavigation} className={loginStyles.left} onMouseOver={handleHover} onMouseOut={handleMouseOut}/>
@@ -227,11 +227,11 @@ function SignUp() {
       <div className={loginStyles.snackbar}>
         <h3>{snackMessage}</h3>
       </div>}
-      <div className={loginStyles.buttons}>
+      {/* <div className={loginStyles.buttons}>
         <button>Google</button>
-        {/* <button>Magic Link</button> */}
-      </div>
-    </>
+        <button>Magic Link</button>
+      </div> */}
+    </div>
   )
 }
 

@@ -34,15 +34,6 @@ function Layout({children}) {
                 
     
             }
-            else{
-                if(!(window.location.pathname == "/login" || window.location.pathname == "/signup" || window.location.pathname == "/forgot")){
-                    window.location.pathname = "/login"
-                }
-                dispatch({
-                    type: 'userCreated',
-                    userCreated: false
-                })
-            }
             if(localStorage.getItem("moviesids") && localStorage.getItem("booksids")){
                 dispatch({
                     type: 'preference',
@@ -60,7 +51,6 @@ function Layout({children}) {
     },[])
   return (
         <>
-            
             <div>{children}</div>
         </>
   )

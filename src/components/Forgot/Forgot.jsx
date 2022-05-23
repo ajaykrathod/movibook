@@ -73,7 +73,7 @@ function Forgot() {
     }
   }
   return (
-    <>
+    <div className={loginStyles.loginScreen}>
       <div className={loginStyles.title}>Forgot</div>
       <div className={loginStyles.authContainer}>
         <img src="/left.png" alt="" srcSet="" onClick={handleRightNavigation} height="100px" className={loginStyles.left} onMouseOver={handleHover} onMouseOut={handleMouseOut}/>
@@ -102,11 +102,11 @@ function Forgot() {
       <div className={loginStyles.snackbar}>
         <h3>{snackMessage}</h3>
       </div>}
-      <div className={loginStyles.buttons}>
+      {/* <div className={loginStyles.buttons}>
         <button>Google</button>
-        {/* <button>Magic Link</button> */}
-      </div>
-    </>
+        <button>Magic Link</button>
+      </div> */}
+    </div>
   )
 }
 

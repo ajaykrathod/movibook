@@ -1,10 +1,12 @@
 .modalContainer {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
     background-color: rgba(128 , 128, 128, 0.6);
 }
 
@@ -17,28 +19,57 @@
     z-index: 10000;
     display: flex;
     margin: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     padding: 1px;
-    flex-direction: row;
+    flex-direction: column;
     border-radius: 30px;
     box-shadow: 5px 10px 100px 10px #ededed;
-    background-color:#424242;
-    color: white;
+    background-color:white;
+    color: black;
+}
+
+.modal::-webkit-scrollbar {
+    width: 5px;
+    padding: 5vh 0;
+    background-color: gray;
 }
 .posterContainer {
     padding: 0;
     display: flex;
     flex-direction: row;
-    margin-left: -1.5vw;
+    /* margin-left: -1.5vw; */
 }
 .posterImage {
-    border-radius: 30px 0 0 30px;
+    border-radius: 30px;
     width: auto;
-    height: 70vh;
+    height: 60vh;
 }
 
+.buyIcon {
+    width: 50px;
+    height: 50px;
+}
+
+.castContainer {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+}
+strong {
+    padding-left: 10px;
+}
+.buyRentContainer {
+    display: flex;
+    width: 100%;
+    margin: 10px;
+    justify-content: space-between;
+    flex-direction: row;
+}
 .infomovie {
     margin-left: 2vw;
     overflow-y: auto;
+    overflow-x: hidden;
     height: auto;
     display: flex;
     padding: 0;
@@ -55,21 +86,40 @@
     position: relative;
     left: 95%;
     top: 4%;
-    color: white;
 }
 
+.trailerContainer {
+    width: 20vw;
+    margin: 5px;
+    border-radius: 20px;
+}
+.trailerHorizontal {
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.youtube {
+    width: 20vw;
+    height: auto;
+    margin: 10px;
+}
 @media(max-width:850px){
     .close {
         left: 90%;
     }
     
     .modal {
-        top: 15vh;
-        left: 10vw;
+        top: 5vh;
+        left: 5vw;
         padding: 0;
         justify-content: flex-start;
-        width: 80vw;
-        height: 70vh;
+        width: 90vw;
+        height: 90vh;
     }
 
     .posterContainer {

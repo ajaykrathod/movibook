@@ -80,7 +80,7 @@ function Login() {
   }
 
   return (
-    <>
+    <div className={loginStyles.loginScreen}>
       <div className={loginStyles.title}><h1>Login</h1></div>
       <div className={loginStyles.authContainer}>
         <div className={loginStyles.leftContainer}>
@@ -103,11 +103,11 @@ function Login() {
       <div className={loginStyles.snackbar}>
         <h3>{snackMessage}</h3>
       </div>}
-      <div className={loginStyles.buttons}>
+      {/* <div className={loginStyles.buttons}>
         <button>Google</button>
-        {/* <button>Magic Link</button> */}
-      </div>
-    </>
+        {/* <button>Magic Link</button>
+      </div> */}
+    </div>
   )
 }
 
