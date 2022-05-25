@@ -1,13 +1,15 @@
 import React,{useEffect, useState} from 'react'
-import contactStyles from './Contact.module.css'
+import feedbackStyles from './Feedback.module.css'
 import { useNavigate } from 'react-router-dom'
 import { getAuth, sendPasswordResetEmail } from 'firebase/auth'
 import app from 'Utilities/firebase'
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
-function Contact() {
+import { Rating } from 'react-simple-star-rating'
+function Feedback() {
 
   const [email, setEmail] = useState()
   const [message, setMessage] = useState()
+  const [rating, setRating] = useState()
   const [messageError, setMessageError] = useState()
   const [snackMessage,setSnackMessage] = useState()
   const [emailError, setEmailError] = useState()
@@ -42,7 +44,7 @@ function Contact() {
         To : email,
         From : process.env.REACT_APP_GMAIL,
         Subject : `Received Your Message`,
-        Body : `Hey ${email} thanks for contacting with us we will be looking into your response shortly.`
+        Body : `Hey ${email} thanks for Feedbacking with us we will be looking into your response shortly.`
     })
     .then(res => {
     })
@@ -50,10 +52,10 @@ function Contact() {
     }
   }
   return (
-    <>
-      <h1 className={contactStyles.title}>Contact</h1>
-      <div className={contactStyles.authContainer}>
-          <div className={contactStyles.loginform}>
+    <div className={feedbackStyles.feedbackScreen}>
+      <h1 className={feedbackStyles.title}>Feedback</h1>
+      <div className={feedbackStyles.authContainer}>
+          <div className={feedbackStyles.loginform}>
             <input 
               style={emailError ? {border: "1px solid red"} : {}} 
               type="email" 
@@ -65,9 +67,9 @@ function Contact() {
                 setEmailError()
               }}
               id="" 
-              className={contactStyles.email}
+              className={feedbackStyles.email}
             />
-             <div className={contactStyles.displayError}>{emailError}</div>
+             <div className={feedbackStyles.displayError}>{emailError}</div>
             <textarea 
               style={messageError ? {border: "1px solid red"} : {}} 
               type="text" 
@@ -79,18 +81,29 @@ function Contact() {
                 setMessageError()
               }}
               id="" 
-              className={contactStyles.message}
+              className={feedbackStyles.message}
             />
-            <div className={contactStyles.displayError}>{messageError}</div>
+            <div className={feedbackStyles.displayError}>{messageError}</div>
+            <div className={feedbackStyles.starContainer}>
+            <h3>How was your Experience</h3>
+            <Rating
+              ratingValue={rating}
+              starRatedColor="blue"
+              onClick={(rating) => {
+                setRating(rating)
+              }}
+              name='rating'
+            />
+            </div>
             <button onClick={handleClick}>Ping</button>
         </div>
       </div>
       {/* {snackVisible && 
-      <div className={contactStyles.snackbar}>
+      <div className={feedbackStyles.snackbar}>
         <h3>{snackMessage}</h3>
       </div>} */}
-    </>
+    </div>
   )
 }
 
-export default Contact
+export default Feedback

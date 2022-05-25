@@ -55,7 +55,7 @@ import Movies from 'components/Movies/Movies';
 import Books from 'components/Books/Books';
 import Forgot from 'components/Forgot/Forgot';
 import SignUp from 'components/SignUp/SignUp';
-import Contact from 'components/Contact/Contact';
+import Feedback from 'components/FeedBack/Feedback';
 import Layout from 'components/Layout/Layout';
 import { ChangeFeature } from 'Context/NavigationContext';
 import reducer,{initialState} from 'Context/reducer';
@@ -74,7 +74,7 @@ function App({callback}) {
           <Route path="/movies" element={<Movies />}/>
           <Route path="/books" element={<Books />}/>
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />  
+          <Route path="/feedback" element={<Feedback />} />  
           <Route path="/login" element={<Login />} />
           <Route path='/forgot' element={<Forgot/>}/>
           <Route path='/signup' element={<SignUp/>}/>
